@@ -194,14 +194,14 @@ test { puts "You are in the block" }
 
 ## Ruby class?
 
-Example - 1:
+**Example - 1:**
 ```
 class A
 
 end
 ```
 
-Example - 2:
+**Example - 2:**
 ```
 class Book
 
@@ -229,8 +229,8 @@ class Book
 end
 
 # Create Objects
-book1 = Customer.new(1, "Harry Potter", 400)
-book2 = Customer.new(2, "The Lord of the Rings", 550)
+book1 = Book.new(1, "Harry Potter", 400)
+book2 = Book.new(2, "The Lord of the Rings", 550)
 
 # Call Methods
 book1.display_details()
@@ -392,3 +392,4 @@ a = A.new
 a.methods
 a.sum(10, 20)
 ```
+
