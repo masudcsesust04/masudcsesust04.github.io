@@ -77,5 +77,5 @@ RubyMine, Netbeans, IntelliJ, Eclipse, VSCode, Sublime, Nano, Vim, MySQL workben
 - Good understanding of and belief in a company’s engineering processes, product, and vision.
 
 ## EDUCATION & TRAINING
-- B.Sc in Computer Science and Engineering from the [Shah-jalal University of Science and Technology University](https://www.sust.edu/), Passing Year: 2010 with CGPA: 3.29(out of scale 4)
+- B.Sc in Computer Science and Engineering from the [Shah-jalal University of Science and Technology University](https://www.sust.edu/), Passing Year: 2010.
 - Advanced Certificate for Management Professionals (ACMP) Industry 4.0 - Organized by the Institute of Business Administration ([IBA](https://www.iba-du.edu/)), University of Dhaka, with support from ICTD, BCC, and LICT.
