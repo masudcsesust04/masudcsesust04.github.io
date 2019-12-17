@@ -34,7 +34,7 @@ irb(main)> puts "Hello Ruby!" or p "Hello Ruby!"
 ```
 
 ##  Ruby operators?
-Logical Operators:
+**Logical operators:**
 - ```and```	Called Logical AND operator. If both the operands are true, then the condition becomes true.	(a and b) is true.
 - ```or```	Called Logical OR Operator. If any of the two operands are non zero, then the condition becomes true.	(a or b) is true.
 - ```&&```	Called Logical AND operator. If both the operands are non zero, then the condition becomes true.	(a && b) is true.
@@ -42,14 +42,14 @@ Logical Operators:
 - ```!```	Called Logical NOT Operator. Use to reverses the logical state of its operand. If a condition is true, then Logical NOT operator will make false.	!(a && b) is false.
 - ```not```	Called Logical NOT Operator. Use to reverses the logical state of its operand. If a condition is true, then Logical NOT operator will make false.	not(a && b) is false.
 
-Ternary Operator: 
+**Ternary operator:** 
 - ```? :```	Conditional Expression	If Condition is true ? Then value X : Otherwise value Y
 
-Range Operators:
+**Range operators:**
 - ```..```	Creates a range from start point to end point inclusive.	1..10 Creates a range from 1 to 10 inclusive.
 - ```...```	Creates a range from start point to end point exclusive.	1...10 Creates a range from 1 to 9.
 
-Operators Precedence:
+**Operators precedence:**
 - ```::```	Constant resolution operator
 - ```* / %```	Multiply, divide, and modulo
 -	```+ -```	Addition and subtraction
@@ -90,7 +90,7 @@ end
 end
 ```
 
-## Ruby comments:
+## Ruby comments?
 - Single line comment
 ```
 # This is a single line comment.
@@ -118,7 +118,44 @@ like. But =begin and =end should come in the first line only.
 5. ```__FILE__``` − The name of the current source file.
 6. ```__LINE__``` − The current line number in the source file.
 
-## Ruby Methods?
+## Ruby data types?
+Ruby has several data types. All data types are based on classes because as we know ruby is a pure Object-Oriented language. That means ruby has no primitive data types (ex- int, float, long, char etc.) like C, C++, JAVA etc. languages.
+
+- Booleans
+- Symbols
+- Numbers
+- Strings
+- Arrays
+- Hashes
+
+**Example:**
+```
+# Booleans
+p true.class, false.class
+
+# Symbols
+p :age.class
+
+# Numbers
+p 1.class
+p 4.5.class
+p 3_463_456_457.class
+
+# Strings
+p "Ruby".class
+
+# Arrays
+p [1, 2, 3].class
+
+# Hashes
+p h.class
+```
+
+## Ruby methods?
+- Ruby methods are very similar to functions in any other programming language.
+- Method names should begin with a lowercase letter. If you begin a method name with an uppercase letter, Ruby might think that it is a constant.
+- Methods should be defined before calling them, otherwise Ruby will raise an exception for undefined method invoking.
+
 ```
 def method_name
   # code
@@ -131,7 +168,7 @@ def method_with_param(first_name, last_name)
 end
 ```
 
-## Ruby Arrays?
+## Ruby arrays?
 ```
 ary = [  "fred", 10, 3.14, "This is a string", "last element", ]
 
@@ -140,7 +177,7 @@ ary.each do |i|
 end
 ```
 
-## Ruby Hashes?
+## Ruby hashes?
 ```
 hsh = colors = { "red" => 0xf00, "green" => 0x0f0, "blue" => 0x00f }
 hsh.each do |key, value|
@@ -148,7 +185,7 @@ hsh.each do |key, value|
 end
 ```
 
-## Ruby Ranges?
+## Ruby ranges?
 ```
 (10..15).each do |n| 
    print n, ' ' 
@@ -193,7 +230,6 @@ test { puts "You are in the block" }
 
 
 ## Ruby class?
-
 **Example - 1:**
 ```
 class A
@@ -212,7 +248,7 @@ class Book
 
   def initialize(id, title, pages)
     @id = id
-    @title = name
+    @title = title
     @pages = pages
   end
 
@@ -240,7 +276,7 @@ book1.total_no_of_books()
 book2.total_no_of_books()
 ```
 
-## Ruby Inheritance?
+## Ruby inheritance?
 ```
 class A
 
@@ -249,6 +285,12 @@ end
 class B < A
 
 end
+
+B.superclass # => A
+B.superclass.name # => "A"
+
+a = Array.new
+a.class.ancestors
 ```
 
 ## Ruby modules?
@@ -334,7 +376,11 @@ M::B.subtraction
 ```
 1 + 1
 3 - 1
+x = 10
+y = 15
+sum = x + y
 Math.sqrt(4)
+Math::PI
 ```
 
 ```
@@ -392,4 +438,3 @@ a = A.new
 a.methods
 a.sum(10, 20)
 ```
-
