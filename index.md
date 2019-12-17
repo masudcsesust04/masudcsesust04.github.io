@@ -66,7 +66,7 @@ RubyMine, Netbeans, IntelliJ, Eclipse, VSCode, Sublime, Nano, Vim, MySQL workben
 ## PROGRAMMING / PROBLEM SOLVING SKILLS
 - Achieved ```gold badge``` with ```5 stars``` in general problem solving at [Hacker Rank](https://www.hackerrank.com/masudcsesust04).
 - Achieved ```gold badge``` with ```5 stars``` in ```Java``` language at [Hacker Rank](https://www.hackerrank.com/masudcsesust04)
-- Achieved ```bronze badge``` with ```1 stars``` in ```Ruby``` language at [Hacker Rank](https://www.hackerrank.com/masudcsesust04).
+- Achieved ```gold badge``` with ```5 stars``` in ```Ruby``` language at [Hacker Rank](https://www.hackerrank.com/masudcsesust04).
 - Achieved ```priest``` rank with 68+ accepted solutions at [Codeabbay](https://www.codeabbey.com) online judge.
 
 ## MANAGERIAL SKILLS
