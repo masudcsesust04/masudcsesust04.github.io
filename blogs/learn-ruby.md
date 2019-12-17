@@ -19,6 +19,7 @@
 - Ruby, Classes
 - Ruby, Inheritance
 - Ruby, Modules
+- Ruby, Enumerable
 - Ruby, Work with IRB
 
 ## What is Ruby?
@@ -30,6 +31,8 @@
 - Current version 2.6.7
 
 Note: **Ruby is "A Programmer's Best Friend".**
+
+Todo: Ruby philosophy, Humanize or gramatical?
 
 ## What is rbenv?
 - Ruby version manager. Work with multiple ruby versions for differnet applications when needed.
@@ -297,6 +300,8 @@ book1.total_no_of_books()
 book2.total_no_of_books()
 ```
 
+TODO: Explain ruby OOP encapsulation feature for instance variable. Example with setter and getter method. And alternate with built in attr_accessor method.  
+
 ## Ruby inheritance?
 ```
 class A
@@ -313,6 +318,7 @@ B.superclass.name # => "A"
 a = Array.new
 a.class.ancestors
 ```
+TODO: Add multiple inheritance using module with example.
 
 ## Ruby modules?
 Modules are a way of grouping together methods, classes, and constants. Modules give you two major benefits.
