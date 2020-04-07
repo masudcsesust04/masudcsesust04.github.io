@@ -49,7 +49,6 @@ Type=simple
 WorkingDirectory=/var/www/your_app/current/
 ExecStart=/home/user/.rbenv/shims/bundle exec sidekiq -e production # rails bundle path 'ruby -v' will show the path
 Environment=RAILS_ENV=production
-Environment=MY_DATABASE_PASSWORD=your_db_password
 User=app_user
 Group=app_user
 UMask=0002
