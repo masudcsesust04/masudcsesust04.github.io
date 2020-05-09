@@ -95,6 +95,18 @@ $ git config --global alias.st status
 $ git config --global alias.last 'log -1 HEAD'
 ```
 
+## Install github-desktop using AUR repository
+Install fakeroot
+```
+$ sudo pacman -S fakeroot # Used for installation from source
+```
+
+Clone github-desktop from https://aur.archlinux.org/packages/github-desktop/  arch repository
+```
+$ cd github-desktop
+$ makepkg -si
+```
+
 ## Vim/nvim as git commit default editor
 ```
 $ git config --global core.editor "nvim"
