@@ -83,6 +83,8 @@ $ git --version
 ```
 git config --global user.name "Md. Masud Rana"
 git config --global user.email "youremail@example.com"
+git config --global user.signingkey YOUR_GPG_KEY
+git config --global commit.gpgsign true
 git config --global --list
 ```
 
@@ -94,6 +96,8 @@ $ git config --global alias.ci commit
 $ git config --global alias.st status
 $ git config --global alias.last 'log -1 HEAD'
 ```
+
+Note: Sample ```~/.gitconfig``` file https://github.com/masudcsesust04/dotfiles/blob/master/git/.gitconfig 
 
 ## Install github-desktop using AUR repository
 Install fakeroot
