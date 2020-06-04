@@ -99,3 +99,8 @@ Search form:
       = f.submit 'Search', class: 'btn btn-info btn-block'
 ```
 
+Cancan ability user can be able to update their own password only:
+```
+can [:change_password, :update_password], User, user_id: user.id  
+```
+
