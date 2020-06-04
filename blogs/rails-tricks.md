@@ -5,6 +5,27 @@ Connect database from rails console and execute sql queries:
 $ bundle exec rails dbconsole
 ```
 
+Truncate a db table data from rails console:
+```
+User.connection.truncate(User.table_name)
+```
+
+Create model(user seed) data without validation:
+```
+u1 = User.new(name: 'admin', email: "admin@example.com", mobile_number: '01912107357', password: 'Admin@123', password_confirmation: 'Admin@123', allowed_to_log_in: true)
+u1.save(false)
+```
+
+Ruby/Rails class(model) private class method:
+```
+
+def self.parse_data_file
+  []
+end
+
+private_class_method :parse_data_file
+```
+
 Range of dates:
 ```
 (1.week.ago.to_date..Date.today.to_date).map{ |day| day.strftime('%Y-%m-%d') }
