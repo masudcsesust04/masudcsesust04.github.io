@@ -16,9 +16,14 @@ u1 = User.new(name: 'admin', email: "admin@example.com", mobile_number: '0191210
 u1.save(false)
 ```
 
-Ruby/Rails class(model) private class method:
+Execute SQL query using ActiveRecord:
+```
+# Need to verify
+results = ActiveRecord::Base.connection.execute("SELECT * FROM users") 
 ```
 
+Ruby/Rails class(model) private class method:
+```
 def self.parse_data_file
   []
 end
@@ -103,4 +108,30 @@ Cancan ability user can be able to update their own password only:
 ```
 can [:change_password, :update_password], User, user_id: user.id  
 ```
+
+Sum of array of objects attribute values:
+```
+class Product
+
+  def initialize(id, name, price)
+    @id = id
+    @name = name
+    @price = price
+  end
+end
+
+products = []
+p1 = Product.new(1, 'Shirt',20)
+p2 =Product.new(2, 'T-Shirt', 30)
+products << p1
+products << p2
+total = products.sum(&:price)
+p total
+```
+
+Usefull directory format to follow:
+- Use YYYYMMDD format for naming a directory to keep the versioning of static data files. 
+- In this format directories will be automatically sorted as ascending order of number.
+- Example- 20200601, 20200602, 20200603, 20200604, 20200605, 20200606 etc.
+- Ruby script: ```Time.now.strftime('%Y%m%d')```
 
