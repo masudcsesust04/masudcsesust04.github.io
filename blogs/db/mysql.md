@@ -98,6 +98,34 @@ CREATE TABLE users (
 )
 ```
 
+### Database character set encoding
+Create database specifying a charset(default charset is ```latin1```):
+```
+mysql> CREATE DATABASE dbname DEFAULT CHARACTER SET utf8mb4 DEFAULT COLLATE utf8mb4_unicode_ci;
+```
+
+Check charset of all database from root user:
+```
+mysql> SELECT SCHEMA_NAME 'database', default_character_set_name 'charset', DEFAULT_COLLATION_NAME 'collation' FROM information_schema.SCHEMATA;
+```
+
+Change charset of an exsiting database:
+```
+mysql> ALTER DATABASE my_test_db CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+```
+Note: It will only provides a default for future tables.
+
+Convert existing latin1 tables:
+```
+mysql> ALTER TABLE tbl CONVERT TO CHARACTER SET utf8mb4;
+```
+FYI, changes the definition and actively changes the necessary bytes in the columns.
+
+Convert specifi column of latin1 tables:
+```
+mysql> ALTER TABLE tbl MODIFY col1 ... CHARACTER SET utf8mb4;
+```
+
 ### Auto increment value reset or change
 
 Delete will not reset the auto increment:
@@ -162,6 +190,10 @@ $ mysqldump -u [username] -p[pass] db_name | gzip > db_backup.sql.gz
 Note:
 - Enter password when prompts in the shell after running the any of the above command.
 - You can even pass the password direclty in the commnad, Which is strictly prohibited.
+
+Dump speicifying max packet size:
+```
+```
 
 ### Troubleshooting
 
