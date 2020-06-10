@@ -191,8 +191,9 @@ Note:
 - Enter password when prompts in the shell after running the any of the above command.
 - You can even pass the password direclty in the commnad, Which is strictly prohibited.
 
-Dump speicifying max packet size:
+Dump specifying max packet size:
 ```
+$ mysqldump --max_allowed_packet=100M -uroot -p db_name > db_name.sql
 ```
 
 ### Troubleshooting
