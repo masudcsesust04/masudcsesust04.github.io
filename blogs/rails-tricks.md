@@ -13,13 +13,20 @@ User.connection.truncate(User.table_name)
 Create model(user seed) data without validation:
 ```
 u1 = User.new(name: 'admin', email: "admin@example.com", mobile_number: '01912107357', password: 'Admin@123', password_confirmation: 'Admin@123', allowed_to_log_in: true)
-u1.save(false)
+u1.save(validate: false)
 ```
 
 Execute SQL query using ActiveRecord:
 ```
 # Need to verify
 results = ActiveRecord::Base.connection.execute("SELECT * FROM users") 
+```
+
+Check list of model classes:
+```
+ActiveRecord::Base.connection.tables.map do |model|
+  model.capitalize.singularize.camelize
+end
 ```
 
 Ruby/Rails class(model) private class method:
