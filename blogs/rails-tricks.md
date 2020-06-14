@@ -1,5 +1,10 @@
 # Rails application development usefull tricks
 
+Generate a rails secret key:
+```
+bundle exec rake secret
+```
+
 Connect database from rails console and execute sql queries:
 ```
 $ bundle exec rails dbconsole
@@ -136,9 +141,69 @@ total = products.sum(&:price)
 p total
 ```
 
+Filter with ajax based from submission:
+Form:
+```
+= form_for(:user, url: users_path, method: :get, html: { id: 'user-form', class: '', remote: true }) do |f|
+  .col-md-2.form-group
+    = f.label 'From Date'
+    = f.text_field :from_date, class: 'form-control', placeholder: 'YYYY-MM-DD', value: from_date
+  .col-md-2.form-group
+    = f.label 'To Date'
+    = f.text_field :to_date, class: 'form-control', placeholder: 'YYYY-MM-DD', value: to_date
+  .col-md-2.form-group
+    = blank_space
+    = f.submit 'Search', id: 'search-button', class: 'btn btn-info btn-block'
+```
+
+Jquery:
+```
+$(document).ready(function() {
+  var load_data = function(form_data={}) {
+    $.ajax({
+      url: '/users/search',
+      type: 'GET',
+      data: form_data,
+      beforeSend: function() {},
+      success: function(response) {
+        console.log(response);
+      },
+      error: function(xhr) {
+        console.log('Failed!');
+      }
+    });
+  };
+
+  // Filter by form submit
+  $("#user-form").submit(function(e) {
+    e.preventDefault();
+
+    var form = $(this);
+    var url = form.attr('action');
+    load_data(form.serialize());
+  });
+
+});
+```
+
 Usefull directory format to follow:
 - Use YYYYMMDD format for naming a directory to keep the versioning of static data files. 
 - In this format directories will be automatically sorted as ascending order of number.
 - Example- 20200601, 20200602, 20200603, 20200604, 20200605, 20200606 etc.
 - Ruby script: ```Time.now.strftime('%Y%m%d')```
+
+Unique elements based on a attribute value from array of objects:
+```
+```
+
+Downlaod as CSV file:
+"Model class method
+"Model instance method by default
+
+
+Data importing form files XLS, XLSX or CSV using ```roo``` gem:
+- File read from datewise folder:
+
+
+Graph plot using chartJS:
 
