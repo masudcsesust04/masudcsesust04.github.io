@@ -53,6 +53,11 @@ Active record query to fetch data using date time range(last 1 weeks data):
 users = User.where(created_at: 1.week.ago..Date.today)
 ```
 
+Active record query to fetch data using only matching with date from datetime filed:
+```
+scope :day, -> (start_date) {where("DATE(start_date) = ?", start_date)}
+```
+
 Search with multiple form fileds(attributes):
 ```
 user = User
