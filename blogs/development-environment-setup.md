@@ -111,6 +111,11 @@ $ cd github-desktop
 $ makepkg -si
 ```
 
+## PostgreSQL development package (ex- for ```pg``` gem)
+```
+sudo pacman -S postgresql-libs
+```
+
 ## Vim/nvim as git commit default editor
 ```
 $ git config --global core.editor "nvim"
