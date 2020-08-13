@@ -21,6 +21,11 @@ Set password
 $ passwd user_name 
 ```
 
+Change existing user password
+```
+$ passwd user_name
+```
+
 Remove/delete user
 ```
 $ userdel user_name
