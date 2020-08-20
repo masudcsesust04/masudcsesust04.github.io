@@ -206,9 +206,36 @@ Downlaod as CSV file:
 "Model instance method by default
 
 
-Data importing form files XLS, XLSX or CSV using ```roo``` gem:
+TODO: Data importing form files XLS, XLSX or CSV using ```roo``` gem:
 - File read from datewise folder:
 
 
-Graph plot using chartJS:
+TODO: Graph plot using chartJS:
 
+
+Unzip a zipped file:
+```
+source_path = Rails.root.join('data', 'blogs.zip').to_s
+destination_path = Rails.root.join('data', 'blog')
+
+
+Zip::File.open(source_path) do |zip_file|
+  zip_file.each do |file|
+    puts file.name
+    f_path = File.join(destination_path, file.name)
+    zip_file.extract(file, f_path) unless File.exist? (f_path)
+  end
+end
+```
+
+Benchmarking of a code block execution time:
+```
+require 'benchmark'
+
+def get_files
+  time = Benchmark.measure do
+    pdf_files = PdfParser.pdf_files()
+  end
+  puts time.real
+end
+```
