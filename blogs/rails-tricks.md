@@ -239,3 +239,20 @@ def get_files
   puts time.real
 end
 ```
+
+### Gemfile environment group:
+If you don't need some gems in your locally then make it a group gems explicitely by environment like below
+```
+group :production, :staging do
+  gem install dbi
+  gem install ruby-oci8
+end
+```
+
+In my case i was not able to install ruby-oci8 gem due to the oracle instant client istallation error LD_LIBRARY_PATH not set error locall that's why i was not able to run the app and deploy anything on prod/staging env. my solution was to ignore instalation of ruby-oci8 gem locally as i was able to install this gem in my prod environment.
+
+After that have to make sure you run bundle install command without production and staging block:
+```
+$ bundle install --without production staging
+```
+
