@@ -172,6 +172,11 @@ Dump a specific/single database:
 $ mysqldump -u [username] -p db_name > db_backup.sql
 ```
 
+Dump specific tables from a database:
+```
+mysqldump -u[username] -p db_name table_1 table_2 table_3 > mydb_tables.sql
+```
+
 Dump all database:
 ``` 
 $ mysqldump -u [username] -p --all-databases > all_db_backup.sql
