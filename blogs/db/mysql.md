@@ -40,6 +40,16 @@ $ GRANT ALL PRIVILEGES ON database_name.* TO 'username'@'hostname';
 $ FLUSH PRIVILEGES;
 ```
 
+Grant user external database access from a specific ip address block:
+```
+CREATE USER 'newuser'@'x.x.x.%' IDENTIFIED BY 'password';
+GRANT SELECT ON * . * TO 'newuser'@''x.x.x.%';
+FLUSH PRIVILEGES;
+```
+Note: 
+- Here, x are ip address block.
+- host could be 'x.x.x.%' or 'x.x.%.%', or 'x.%.%.%'
+
 Grant user to a specific database table only:
 ```
 $ GRANT [type_of_permissio(ex-create, update)] ON database_name.table_name TO ‘username’@'hostname;
