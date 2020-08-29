@@ -152,5 +152,14 @@ Merge a branch with current working branch
 $ git merge [branch_name]
 ```
 
-TODO: Add instructions to change/modify commit message
+Change/modify last commit message:
+```
+$ git commit --amend
+```
+
+Change/modify a particular head with rebase command:
+```
+$ git rebase -i HEAD~2
+```
+Note: Here, 2 is the head i want to pick while modifying commit message.
 
