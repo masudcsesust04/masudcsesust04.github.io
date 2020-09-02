@@ -268,5 +268,20 @@ file.truncate(0)
 file.close()
 ```
 
+### Export or write files as CSV in a particular rails app directory:
+```
+users = User.all
+attributes = %w{ id first_name last_name user_name email address mobile created_at updated_at }
+export_path = Rails.root.join('data', 'users.csv')
+# Clear or empty if there is an existing file
+File.open(export_path, 'wb') { |file| file.truncate(0) }
 
+CSV.open(export_path, 'wb') do |csv|
+  csv << attributes.map(&:upcase)
+
+  users.each do |user|
+    csv << attributes.map { |attr| user.send(attr) }
+  end
+end
+```
 
