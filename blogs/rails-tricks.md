@@ -268,6 +268,15 @@ file.truncate(0)
 file.close()
 ```
 
+To truncate a file:
+```
+File.truncate('/path/to/file', 0)
+```
+To truncate list of files:
+```
+[file1, file2, file3].each { |file| File.truncate(file, 0) }
+```
+
 ### Export or write files as CSV in a particular rails app directory:
 ```
 users = User.all
