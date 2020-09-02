@@ -256,3 +256,17 @@ After that have to make sure you run bundle install command without production a
 $ bundle install --without production staging
 ```
 
+### Make Empty a file using ruby
+
+```
+File.open('/tmp/file.txt', 'w') {|file| file.truncate(0) }
+```
+or
+```
+file = File.open(file_path, 'w')
+file.truncate(0)
+file.close()
+```
+
+
+
