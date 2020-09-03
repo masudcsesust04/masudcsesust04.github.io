@@ -309,4 +309,9 @@ Descending order:
 2. objects_array.uniq!(&:attribute)
 ```
 
+### Array of values for a particular attribute from array of objects:
+```
+users = User.all
+emails_array = users.map { |user| user.email }
+```
 
