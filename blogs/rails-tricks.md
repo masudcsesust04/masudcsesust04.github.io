@@ -197,10 +197,6 @@ Usefull directory format to follow:
 - Example- 20200601, 20200602, 20200603, 20200604, 20200605, 20200606 etc.
 - Ruby script: ```Time.now.strftime('%Y%m%d')```
 
-Unique elements based on a attribute value from array of objects:
-```
-```
-
 Downlaod as CSV file:
 "Model class method
 "Model instance method by default
@@ -307,4 +303,10 @@ Descending order:
 1. objects_array.sort! { |a, b|  b.attribute <=> a.attribute }
 2. objects_array.sort_by{ |obj| obj.attribute }.reverse
 ```
+### Unique elements based on a attribute value from array of objects:
+```
+1. objects_array.uniq(&:attribute)
+2. objects_array.uniq!(&:attribute)
+```
+
 
