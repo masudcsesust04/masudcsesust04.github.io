@@ -315,3 +315,21 @@ users = User.all
 emails_array = users.map { |user| user.email }
 ```
 
+
+### Days ago date range from a particular start and end date time with period of days:
+```
+from_date     = '2020-08-31 00:00'
+to_date       = '2020-08-31 23:59'
+period        = 2
+
+from_days_ago = (Date.parse(Time.now.strftime('%Y-%m-%d')) - Date.parse(from_date.split(' ').first)).to_i
+from_days_ago = from_days_ago < 0 ? period : from_days_ago + period
+from_days_ago = from_days_ago.days.ago.strftime('%Y-%m-%d')
+to_days_ago   = (Date.parse(Time.now.strftime('%Y-%m-%d')) - Date.parse(to_date.split(' ').first)).to_i
+to_days_ago   = to_days_ago < 0 ? period : to_days_ago + period
+to_days_ago   = to_days_ago.days.ago.strftime('%Y-%m-%d')
+from_time     = "#{from_days_ago} #{from_date.split(' ').last}"
+to_time       = "#{to_days_ago} #{to_date.split(' ').last}"
+history_date  = "#{from_time} to #{to_time}"
+```
+
