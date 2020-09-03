@@ -294,3 +294,17 @@ CSV.open(export_path, 'wb') do |csv|
 end
 ```
 
+### Sort array of objects
+Ascending order:
+```
+1. objects_array.sort_by { |obj| obj.attribute }
+2. objects_array.sort_by(&:attribute)
+3. objects_array.sort! { |a, b|  a.attribute <=> b.attribute }
+```
+
+Descending order:
+```
+1. objects_array.sort! { |a, b|  b.attribute <=> a.attribute }
+2. objects_array.sort_by{ |obj| obj.attribute }.reverse
+```
+
