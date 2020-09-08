@@ -96,6 +96,14 @@ Remove/Delete group
 $ groupdel group_name
 ```
 
+Add user to suders group:
+```
+$ usermod -aG sudo newuser
+Or
+$ sudo usermod -aG sudo newuser
+```
+Here, The ```-aG``` option tells the system to append the user to the specified group. (The ```-a``` option is only used with ```G```.)
+
 Count number of groups
 ```
 $ wc -l /etc/group
