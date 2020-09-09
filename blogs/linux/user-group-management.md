@@ -104,6 +104,16 @@ $ sudo usermod -aG sudo newuser
 ```
 Here, The ```-aG``` option tells the system to append the user to the specified group. (The ```-a``` option is only used with ```G```.)
 
+Verify user belongs to sudo group:
+```
+$ groups newuser
+```
+
+Verify sudo access:
+```
+$ su - newuser
+```
+
 Count number of groups
 ```
 $ wc -l /etc/group
